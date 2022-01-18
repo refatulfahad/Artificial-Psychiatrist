@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="name">Mental Health Status</string>
+    <string name="text">Age</string>
+    <string name="text1">TimeSpentOnlineClass</string>
+    <string name="text2">RatingOnlineClass</string>
+    <string name="text3">MediumOnlineClass</string>
+    <string name="text4">TimeSpentStudy</string>
+    <string name="text5">TimeSpentFitness</string>
+    <string name="text6">TimeSpentSleep</string>
+    <string name="text7">TimeSpentSocialMedia</string>
+    <string name="text8">PreferedSocialMedia</string>
+    <string name="text9">TimeSpentTV</string>
+    <string name="text10">NumberMealsPerDay</string>
+    <string name="text11">ChangeYourWeight</string>
+    <string name="text12">StressBusters</string>
+    <string name="text13">TimeUtilized</string>
+    <string name="text14">MoreConnectedYourFamilyFriendsRelatives</string>
+    <string name="text15">WhatYouMissMost</string>
+    <string name="button_name">submit</string>
+
+    <string name="name1">Treatment Requirement Status</string>
+
+    <string name="tex1">PartTimeEmployment</string>
+<!--    <string name="tex1">MetalHealthStatus</string>-->
+    <string name="tex2">EducationStatus</string>
+    <string name="tex3">DeviceWithoutPhone</string>
+    <string name="tex4">PreviousMentalTreatment</string>
+    <string name="tex5">Disabled</string>
+    <string name="tex6">RegularAccessInternet</string>
+    <string name="tex7">LiveWithFamily</string>
+    <string name="tex8">StudyGap</string>
+    <string name="tex9">Income(USD)</string>
+    <string name="tex10">ReadWithoutCurriculum</string>
+    <string name="tex11">LongConcentration</string>
+    <string name="tex12">Anxiety</string>
+    <string name="tex13">Depression</string>
+    <string name="tex14">ObsessiveThinking</string>
+    <string name="tex15">MoodSwings</string>
+    <string name="tex16">PanicAttacks</string>
+    <string name="tex17">CompulsiveBehavior</string>
+    <string name="tex18">Tiredness</string>
+    <string name="tex19">Age</string>
+    <string name="tex20">Gender</string>
+    <string name="button1">submit</string>
+</resources>
