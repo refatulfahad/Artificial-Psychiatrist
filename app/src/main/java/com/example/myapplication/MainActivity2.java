@@ -3,6 +3,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -25,11 +27,11 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class treatment extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity {
 
 
     EditText PartTimeEmployment,EducationStatus,DeviceWithoutPhone,PreviousMentalTreatment,Disabled,RegularAccessInternet,LiveWithFamily,StudyGap,Income,ReadWithoutCurriculum,LongConcentration,
-    Anxiety,Depression,ObsessiveThinking,MoodSwings,PanicAttacks,CompulsiveBehavior,Tiredness,Age,Gender,MetalHealthStatus;
+            Anxiety,Depression,ObsessiveThinking,MoodSwings,PanicAttacks,CompulsiveBehavior,Tiredness,Age,Gender,MetalHealthStatus;
     Button predict;
     TextView result;
     //    String url = "https://refatapp.herokuapp.com/predict";
@@ -39,9 +41,11 @@ public class treatment extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        //Intent intent = getIntent();
+        setContentView(R.layout.activity_main2);
 
         PartTimeEmployment = findViewById(R.id.edt);
+        MetalHealthStatus=findViewById(R.id.edt20);
         EducationStatus = findViewById(R.id.edt1);
         DeviceWithoutPhone = findViewById(R.id.edt2);
         PreviousMentalTreatment = findViewById(R.id.edt3);
@@ -61,7 +65,7 @@ public class treatment extends AppCompatActivity {
         Tiredness = findViewById(R.id.edt17);
         Age = findViewById(R.id.edt18);
         Gender = findViewById(R.id.edt19);
-        MetalHealthStatus=findViewById(R.id.edt20);
+
         predict = findViewById(R.id.button1);
         result = findViewById(R.id.result);
 
@@ -79,18 +83,18 @@ public class treatment extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-//                        Toast.makeText(MainActivity.this, response, Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(MainActivity2.this, response, Toast.LENGTH_SHORT).show();
                         Log.d("myTag", "enter int response");
                         try {
                             JSONObject jsonObject = new JSONObject(response);
                             String data = jsonObject.getString("treatment");
                             if(data.equals("1")){
-                                result.setText("yes");
-//                                        Toast.makeText(MainActivity.this, "refatrtwrtytryertyetyety", Toast.LENGTH_LONG).show();
+                                result.setText("YES");
+//                                        Toast.makeText(MainActivity2.this, "refatrtwrtytryertyetyety", Toast.LENGTH_LONG).show();
 //                                        Log.d("myTag", "correct response");
                             }else{
-                                result.setText("no");
-//                                        Toast.makeText(MainActivity.this, "refrtyertyetrytryrtyrtey", Toast.LENGTH_LONG).show();
+                                result.setText("NO");
+//                                        Toast.makeText(MainActivity2.this, "refrtyertyetrytryrtyrtey", Toast.LENGTH_LONG).show();
 //                                        Log.d("myTag", "wrong response");
                             }
                         } catch (JSONException e) {
@@ -102,8 +106,8 @@ public class treatment extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(treatment.this, "Aff"+ error, Toast.LENGTH_LONG).show();
-                        //Toast.makeText(MainActivity.this, "refat", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity2.this, "Aff"+ error, Toast.LENGTH_LONG).show();
+                        //Toast.makeText(MainActivity2.this, "refat", Toast.LENGTH_LONG).show();
 
                     }
                 }){
@@ -113,6 +117,7 @@ public class treatment extends AppCompatActivity {
                 Map<String,String> params = new HashMap<String,String>();
 
                 params.put("PartTimeEmployment",PartTimeEmployment.getText().toString());
+                params.put("MetalHealthStatus",MetalHealthStatus.getText().toString());
                 params.put("EducationStatus",EducationStatus.getText().toString());
                 params.put("DeviceWithoutPhone",DeviceWithoutPhone.getText().toString());
                 params.put("PreviousMentalTreatment",PreviousMentalTreatment.getText().toString());
@@ -132,12 +137,12 @@ public class treatment extends AppCompatActivity {
                 params.put("Tiredness",Tiredness.getText().toString());
                 params.put("Age",Age.getText().toString());
                 params.put("Gender",Gender.getText().toString());
-                params.put("MetalHealthStatus",MetalHealthStatus.getText().toString());
+
                 return params;
             }
 
         };
-        RequestQueue queue = Volley.newRequestQueue(treatment.this);
+        RequestQueue queue = Volley.newRequestQueue(MainActivity2.this);
         queue.add(stringRequest);
     }
 }

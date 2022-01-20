@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -30,8 +31,9 @@ public class MainActivity extends AppCompatActivity {
     EditText Age_of_Subject,Time_class,Rating_class,Medium_class,spent_study,spent_fitness,spent_sleep,spent_social,platform_media,spent_tv,no_meals,weight,Stress,Time_utilized,find_yourself,miss;
     Button predict;
     TextView result;
-//    String url = "https://refatapp.herokuapp.com/predict";
-    String url = " http://192.168.42.89:8000/predict";
+    //String url = "https://refatthesis.herokuapp.com/predict";
+    String url = "http://10.13.222.161:8000/predict";
+    //String url = " http://127.0.0.1:5000/predict";
 
     String s;
     @Override
@@ -55,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         Time_utilized = findViewById(R.id.edit13);
         find_yourself = findViewById(R.id.edit14);
         miss = findViewById(R.id.edit15);
-        predict = findViewById(R.id.button1);
+        predict = findViewById(R.id.button);
         result = findViewById(R.id.result);
 
         predict.setOnClickListener(new View.OnClickListener() {
@@ -78,11 +80,14 @@ public class MainActivity extends AppCompatActivity {
                                     JSONObject jsonObject = new JSONObject(response);
                                     String data = jsonObject.getString("Health_status");
                                     if(data.equals("1")){
-                                        result.setText("yes");
+                                        //result.setText("yes");
 //                                        Toast.makeText(MainActivity.this, "refatrtwrtytryertyetyety", Toast.LENGTH_LONG).show();
 //                                        Log.d("myTag", "correct response");
+                                        Intent intent=new Intent(getApplicationContext(),MainActivity2.class);
+                                        startActivity(intent);
+
                                     }else{
-                                        result.setText("no");
+                                        result.setText("No");
 //                                        Toast.makeText(MainActivity.this, "refrtyertyetrytryrtyrtey", Toast.LENGTH_LONG).show();
 //                                        Log.d("myTag", "wrong response");
                                     }

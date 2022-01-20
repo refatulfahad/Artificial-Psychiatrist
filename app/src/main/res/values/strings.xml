@@ -22,7 +22,7 @@
     <string name="name1">Treatment Requirement Status</string>
 
     <string name="tex1">PartTimeEmployment</string>
-<!--    <string name="tex1">MetalHealthStatus</string>-->
+    <!--    <string name="tex1">MetalHealthStatus</string>-->
     <string name="tex2">EducationStatus</string>
     <string name="tex3">DeviceWithoutPhone</string>
     <string name="tex4">PreviousMentalTreatment</string>
@@ -42,5 +42,6 @@
     <string name="tex18">Tiredness</string>
     <string name="tex19">Age</string>
     <string name="tex20">Gender</string>
+    <string name="tex21">MetalHealthStatus</string>
     <string name="button1">submit</string>
 </resources>
