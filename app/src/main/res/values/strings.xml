@@ -19,6 +19,15 @@
     <string name="text15">WhatYouMissMost</string>
     <string name="button_name">submit</string>
 
+<!--     spinner for mental health-->
+    <string-array name="Rating_class">
+        <item>Very poor</item>
+        <item>Average</item>
+        <item>Good</item>
+        <item>Excellent</item>
+        <item>Poor</item>
+    </string-array>
+
     <string name="name1">Treatment Requirement Status</string>
 
     <string name="tex1">PartTimeEmployment</string>

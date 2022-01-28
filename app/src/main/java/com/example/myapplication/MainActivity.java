@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,9 +30,10 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
 
-    EditText Age_of_Subject,Time_class,Rating_class,Medium_class,spent_study,spent_fitness,spent_sleep,spent_social,platform_media,spent_tv,no_meals,weight,Stress,Time_utilized,find_yourself,miss;
+    EditText Age_of_Subject,Time_class,Medium_class,spent_study,spent_fitness,spent_sleep,spent_social,platform_media,spent_tv,no_meals,weight,Stress,Time_utilized,find_yourself,miss;
     Button predict;
     TextView result;
+    Spinner Rating_class;
     //String url = "https://refatthesis.herokuapp.com/predict";
     String url = "http://10.13.222.161:8000/predict";
     //String url = " http://127.0.0.1:5000/predict";
@@ -43,7 +46,11 @@ public class MainActivity extends AppCompatActivity {
 
         Age_of_Subject = findViewById(R.id.edit);
         Time_class = findViewById(R.id.edit1);
-        Rating_class = findViewById(R.id.edit2);
+        Rating_class =(Spinner) findViewById(R.id.edit2);
+        ArrayAdapter<String>myadapter=new ArrayAdapter<String>(MainActivity.this,
+                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.Rating_class));
+        Rating_class.setAdapter(myadapter);
+
         Medium_class = findViewById(R.id.edit3);
         spent_study = findViewById(R.id.edit4);
         spent_fitness = findViewById(R.id.edit5);
@@ -111,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
                 Map<String,String> params = new HashMap<String,String>();
                 params.put("Age_of_Subject",Age_of_Subject.getText().toString());
                 params.put("Time_class",Time_class.getText().toString());
-                params.put("Rating_class",Rating_class.getText().toString());
+                params.put("Rating_class",Rating_class.getSelectedItem().toString());
                 params.put("Medium_class",Medium_class.getText().toString());
                 params.put("spent_study",spent_study.getText().toString());
                 params.put("spent_fitness",spent_fitness.getText().toString());
