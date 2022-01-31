@@ -30,10 +30,10 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
 
-    EditText Age_of_Subject,Time_class,Medium_class,spent_study,spent_fitness,spent_sleep,spent_social,platform_media,spent_tv,no_meals,weight,Stress,Time_utilized,find_yourself,miss;
+    EditText Age_of_Subject,Time_class,spent_study,spent_fitness,spent_sleep,spent_social,spent_tv,no_meals,Time_utilized,find_yourself;
     Button predict;
     TextView result;
-    Spinner Rating_class;
+    Spinner Rating_class,Medium_class,platform_media,weight,Stress,miss;
     //String url = "https://refatthesis.herokuapp.com/predict";
     String url = "http://10.13.222.161:8000/predict";
     //String url = " http://127.0.0.1:5000/predict";
@@ -51,19 +51,39 @@ public class MainActivity extends AppCompatActivity {
                 android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.Rating_class));
         Rating_class.setAdapter(myadapter);
 
-        Medium_class = findViewById(R.id.edit3);
+        Medium_class = (Spinner)findViewById(R.id.edit3);
+        ArrayAdapter<String>myadapter1=new ArrayAdapter<String>(MainActivity.this,
+                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.Medium_class));
+        Medium_class.setAdapter(myadapter1);
+
+        platform_media = findViewById(R.id.edit8);
+        ArrayAdapter<String>myadapter2=new ArrayAdapter<String>(MainActivity.this,
+                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.platform_media));
+        platform_media.setAdapter(myadapter2);
+
+        weight = findViewById(R.id.edit11);
+        ArrayAdapter<String>myadapter3=new ArrayAdapter<String>(MainActivity.this,
+                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.weight));
+        weight.setAdapter(myadapter3);
+
+        Stress = findViewById(R.id.edit12);
+        ArrayAdapter<String>myadapter4=new ArrayAdapter<String>(MainActivity.this,
+                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.Stress));
+        Stress.setAdapter(myadapter4);
+
+        miss = findViewById(R.id.edit15);
+        ArrayAdapter<String>myadapter5=new ArrayAdapter<String>(MainActivity.this,
+                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.miss));
+        miss.setAdapter(myadapter5);
+
         spent_study = findViewById(R.id.edit4);
         spent_fitness = findViewById(R.id.edit5);
         spent_sleep = findViewById(R.id.edit6);
         spent_social = findViewById(R.id.edit7);
-        platform_media = findViewById(R.id.edit8);
         spent_tv = findViewById(R.id.edit9);
         no_meals = findViewById(R.id.edit10);
-        weight = findViewById(R.id.edit11);
-        Stress = findViewById(R.id.edit12);
         Time_utilized = findViewById(R.id.edit13);
         find_yourself = findViewById(R.id.edit14);
-        miss = findViewById(R.id.edit15);
         predict = findViewById(R.id.button);
         result = findViewById(R.id.result);
 
@@ -119,19 +139,19 @@ public class MainActivity extends AppCompatActivity {
                 params.put("Age_of_Subject",Age_of_Subject.getText().toString());
                 params.put("Time_class",Time_class.getText().toString());
                 params.put("Rating_class",Rating_class.getSelectedItem().toString());
-                params.put("Medium_class",Medium_class.getText().toString());
+                params.put("Medium_class",Medium_class.getSelectedItem().toString());
                 params.put("spent_study",spent_study.getText().toString());
                 params.put("spent_fitness",spent_fitness.getText().toString());
                 params.put("spent_sleep",spent_sleep.getText().toString());
                 params.put("spent_social",spent_social.getText().toString());
-                params.put("platform_media",platform_media.getText().toString());
+                params.put("platform_media",platform_media.getSelectedItem().toString());
                 params.put("spent_tv",spent_tv.getText().toString());
                 params.put("no_meals",no_meals.getText().toString());
-                params.put("weight",weight.getText().toString());
-                params.put("Stress",Stress.getText().toString());
+                params.put("weight",weight.getSelectedItem().toString());
+                params.put("Stress",Stress.getSelectedItem().toString());
                 params.put("Time_utilized",Time_utilized.getText().toString());
                 params.put("find_yourself",find_yourself.getText().toString());
-                params.put("miss",miss.getText().toString());
+                params.put("miss",miss.getSelectedItem().toString());
                 return params;
             }
 

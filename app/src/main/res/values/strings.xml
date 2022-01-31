@@ -28,6 +28,56 @@
         <item>Poor</item>
     </string-array>
 
+    ><string-array name="Medium_class">
+    <item>Laptop/Desktop</item>
+    <item>Smartphone</item>
+    <item>Smartphone or Laptop/Desktop</item>
+    <item>Any Gadget</item>
+    <item>Tablet</item>
+</string-array>
+    <string-array name="platform_media">
+        <item>Instagram</item>
+        <item>Whatsapp</item>
+        <item>Youtube</item>
+        <item>Linkedin</item>
+        <item>Facebook</item>
+        <item>Twitter</item>
+        <item>Snapchat</item>
+        <item>Reddit</item>
+        <item>Telegram</item>
+        <item>Talklife</item>
+        <item>Quora</item>
+    </string-array>
+
+   <string-array name="weight">
+
+       <item>Remain Constant</item>
+       <item>Increased</item>
+       <item>Decreased</item>
+   </string-array>
+   <string-array name="Stress">
+     <item>Cooking</item>
+     <item>Scrolling through social media</item>
+     <item>Listening to music</item>
+     <item>Watching web series</item>
+     <item>Coding and studying for exams</item>
+     <item>live stream watching</item>
+     <item>Reading</item>
+     <item>Online gaming</item>
+     <item>Sleep</item>
+   </string-array>
+    <string-array name="miss">
+      <item>School/college</item>
+      <item>Roaming around freely</item>
+      <item>Travelling</item>
+      <item>Friends,relatives</item>
+      <item>Eating outside</item>
+      <item>Colleagues</item>
+    </string-array>
+
+
+<!--    Treatment Required-->
+
     <string name="name1">Treatment Requirement Status</string>
 
     <string name="tex1">PartTimeEmployment</string>
@@ -53,4 +103,29 @@
     <string name="tex20">Gender</string>
     <string name="tex21">MetalHealthStatus</string>
     <string name="button1">submit</string>
+
+
+<!--    spinner for treatment-->
+    <string-array name="EducationStatus">
+
+        <item>highschool ongoing</item>
+        <item>High School or GED</item>
+        <item>Phd ongoing</item>
+        <item>Completed Phd</item>
+        <item>Undergraduate</item>
+        <item>graduated</item>
+        <item>Masters ongoing</item>
+        <item>Completed Masters</item>
+    </string-array>
+    <string-array name="Age">
+        <item>30-44</item>
+        <item>18-29</item>
+        <item>45-60</item>
+        <item>>60</item>
+    </string-array>
+    <string-array name="Gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
 </resources>

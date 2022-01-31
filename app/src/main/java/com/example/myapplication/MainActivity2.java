@@ -7,8 +7,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,10 +32,11 @@ import java.util.Map;
 public class MainActivity2 extends AppCompatActivity {
 
 
-    EditText PartTimeEmployment,EducationStatus,DeviceWithoutPhone,PreviousMentalTreatment,Disabled,RegularAccessInternet,LiveWithFamily,StudyGap,Income,ReadWithoutCurriculum,LongConcentration,
-            Anxiety,Depression,ObsessiveThinking,MoodSwings,PanicAttacks,CompulsiveBehavior,Tiredness,Age,Gender,MetalHealthStatus;
+    EditText PartTimeEmployment,DeviceWithoutPhone,PreviousMentalTreatment,Disabled,RegularAccessInternet,LiveWithFamily,StudyGap,Income,ReadWithoutCurriculum,LongConcentration,
+            Anxiety,Depression,ObsessiveThinking,MoodSwings,PanicAttacks,CompulsiveBehavior,Tiredness,MetalHealthStatus;
     Button predict;
     TextView result;
+    Spinner EducationStatus,Age,Gender;
     //    String url = "https://refatapp.herokuapp.com/predict";
     String url = "http://10.13.222.161:8000/treatment";
 
@@ -44,9 +47,23 @@ public class MainActivity2 extends AppCompatActivity {
         //Intent intent = getIntent();
         setContentView(R.layout.activity_main2);
 
+        EducationStatus = findViewById(R.id.edt1);
+        ArrayAdapter<String> myadapter=new ArrayAdapter<String>(MainActivity2.this,
+                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.EducationStatus));
+        EducationStatus.setAdapter(myadapter);
+        Age = findViewById(R.id.edt18);
+        ArrayAdapter<String>myadapter1=new ArrayAdapter<String>(MainActivity2.this,
+                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.Age));
+        Age.setAdapter(myadapter1);
+
+        Gender = findViewById(R.id.edt19);
+        ArrayAdapter<String>myadapter2=new ArrayAdapter<String>(MainActivity2.this,
+                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.Gender));
+        Gender.setAdapter(myadapter2);
+
         PartTimeEmployment = findViewById(R.id.edt);
         MetalHealthStatus=findViewById(R.id.edt20);
-        EducationStatus = findViewById(R.id.edt1);
+
         DeviceWithoutPhone = findViewById(R.id.edt2);
         PreviousMentalTreatment = findViewById(R.id.edt3);
         Disabled = findViewById(R.id.edt4);
@@ -63,8 +80,8 @@ public class MainActivity2 extends AppCompatActivity {
         PanicAttacks = findViewById(R.id.edt15);
         CompulsiveBehavior = findViewById(R.id.edt16);
         Tiredness = findViewById(R.id.edt17);
-        Age = findViewById(R.id.edt18);
-        Gender = findViewById(R.id.edt19);
+
+
 
         predict = findViewById(R.id.button1);
         result = findViewById(R.id.result);
@@ -118,7 +135,7 @@ public class MainActivity2 extends AppCompatActivity {
 
                 params.put("PartTimeEmployment",PartTimeEmployment.getText().toString());
                 params.put("MetalHealthStatus",MetalHealthStatus.getText().toString());
-                params.put("EducationStatus",EducationStatus.getText().toString());
+                params.put("EducationStatus",EducationStatus.getSelectedItem().toString());
                 params.put("DeviceWithoutPhone",DeviceWithoutPhone.getText().toString());
                 params.put("PreviousMentalTreatment",PreviousMentalTreatment.getText().toString());
                 params.put("Disabled",Disabled.getText().toString());
@@ -135,8 +152,8 @@ public class MainActivity2 extends AppCompatActivity {
                 params.put("PanicAttacks",PanicAttacks.getText().toString());
                 params.put("CompulsiveBehavior",CompulsiveBehavior.getText().toString());
                 params.put("Tiredness",Tiredness.getText().toString());
-                params.put("Age",Age.getText().toString());
-                params.put("Gender",Gender.getText().toString());
+                params.put("Age",Age.getSelectedItem().toString());
+                params.put("Gender",Gender.getSelectedItem().toString());
 
                 return params;
             }

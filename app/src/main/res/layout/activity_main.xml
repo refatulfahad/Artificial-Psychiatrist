@@ -115,13 +115,20 @@
                 android:text="@string/text3"
                 >
             </TextView>
-            <EditText
+<!--            <EditText-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:id="@+id/edit3"-->
+<!--                >-->
+<!--            </EditText>-->
+            <Spinner
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:id="@+id/edit3"
-                >
-            </EditText>
+                android:id="@+id/edit3">
+
+            </Spinner>
         </LinearLayout>
 
         <LinearLayout
@@ -141,6 +148,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/edit4"
+                android:maxLines="1"
                 >
             </EditText>
         </LinearLayout>
@@ -162,6 +170,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/edit5"
+                android:maxLines="1"
                 >
             </EditText>
         </LinearLayout>
@@ -176,7 +185,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/text6">
+                android:text="@string/text6"
+                android:maxLines="1"
+                >
 
             </TextView>
 
@@ -198,6 +209,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/text7"
+                android:maxLines="1"
                 >
             </TextView>
             <EditText
@@ -221,13 +233,20 @@
                 android:text="@string/text8"
                 >
             </TextView>
-            <EditText
+<!--            <EditText-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:id="@+id/edit8"-->
+<!--                >-->
+<!--            </EditText>-->
+            <Spinner
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:id="@+id/edit8"
-                >
-            </EditText>
+                android:id="@+id/edit8">
+
+            </Spinner>
         </LinearLayout>
 
         <LinearLayout
@@ -284,13 +303,19 @@
                 android:text="@string/text11"
                 >
             </TextView>
-            <EditText
+<!--            <EditText-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:id="@+id/edit11"-->
+<!--                >-->
+<!--            </EditText>-->
+            <Spinner
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:id="@+id/edit11"
-                >
-            </EditText>
+                android:id="@+id/edit11">
+            </Spinner>
         </LinearLayout>
 
         <LinearLayout
@@ -305,14 +330,20 @@
                 android:text="@string/text12"
                 >
             </TextView>
-            <EditText
+<!--            <EditText-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@color/white"-->
+<!--                android:id="@+id/edit12"-->
+<!--                >-->
+<!--            </EditText>-->
+            <Spinner
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/white"
-                android:id="@+id/edit12"
-                >
-            </EditText>
+                android:id="@+id/edit12">
+            </Spinner>
         </LinearLayout>
 
         <LinearLayout
@@ -371,13 +402,19 @@
                 android:text="@string/text15"
                 >
             </TextView>
-            <EditText
+<!--            <EditText-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:id="@+id/edit15"-->
+<!--                >-->
+<!--            </EditText>-->
+            <Spinner
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:id="@+id/edit15"
-                >
-            </EditText>
+                android:id="@+id/edit15">
+            </Spinner>
         </LinearLayout>
         <LinearLayout
             android:layout_gravity="center"
