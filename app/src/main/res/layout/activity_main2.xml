@@ -14,6 +14,10 @@
         android:layout_margin="10dp"
         android:orientation="vertical"
         >
+        <include
+            android:id="@+id/layouttool"
+            layout="@layout/toolbar"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -24,6 +28,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="30dp"
                 android:text="@string/name1"
+                android:textColor="#006400"
                 android:layout_marginTop="10dp"
                 android:textAlignment="center"
                 android:textStyle="bold"
@@ -42,16 +47,23 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/tex1"
+                android:textStyle="bold"
                 >
             </TextView>
-            <EditText
+<!--            <EditText-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:id="@+id/edt"-->
+
+<!--                >-->
+<!--            </EditText>-->
+            <Spinner
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:id="@+id/edt"
-
-                >
-            </EditText>
+                android:id="@+id/edt">
+            </Spinner>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -63,16 +75,24 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/tex21"
+                android:textStyle="bold"
                 >
             </TextView>
-            <EditText
+<!--            <EditText-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:id="@+id/edt20"-->
+
+<!--                >-->
+<!--            </EditText>-->
+            <Spinner
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:id="@+id/edt20"
+                android:id="@+id/edt20">
+            </Spinner>
 
-                >
-            </EditText>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -84,6 +104,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/tex2"
+                android:textStyle="bold"
                 >
             </TextView>
 <!--            <EditText-->
@@ -112,15 +133,23 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/tex3"
+                android:textStyle="bold"
+
                 >
             </TextView>
-            <EditText
+<!--            <EditText-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:id="@+id/edt2"-->
+<!--                >-->
+<!--            </EditText>-->
+            <Spinner
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:id="@+id/edt2"
-                >
-            </EditText>
+                android:id="@+id/edt2">
+            </Spinner>
         </LinearLayout>
 
         <LinearLayout
@@ -133,15 +162,22 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/tex4"
+                android:textStyle="bold"
                 >
             </TextView>
-            <EditText
+<!--            <EditText-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:id="@+id/edt3"-->
+<!--                >-->
+<!--            </EditText>-->
+            <Spinner
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:id="@+id/edt3"
-                >
-            </EditText>
+                android:id="@+id/edt3">
+            </Spinner>
         </LinearLayout>
 
         <LinearLayout
@@ -154,15 +190,23 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/tex5"
+                android:textStyle="bold"
+
                 >
             </TextView>
-            <EditText
+<!--            <EditText-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:id="@+id/edt4"-->
+<!--                >-->
+<!--            </EditText>-->
+            <Spinner
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:id="@+id/edt4"
-                >
-            </EditText>
+                android:id="@+id/edt4">
+            </Spinner>
         </LinearLayout>
 
         <LinearLayout
@@ -175,15 +219,22 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/tex6"
+                android:textStyle="bold"
                 >
             </TextView>
-            <EditText
+<!--            <EditText-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:id="@+id/edt5"-->
+<!--                >-->
+<!--            </EditText>-->
+            <Spinner
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:id="@+id/edt5"
-                >
-            </EditText>
+                android:id="@+id/edt5">
+            </Spinner>
         </LinearLayout>
 
         <LinearLayout
@@ -196,16 +247,24 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/tex7">
+                android:text="@string/tex7"
+                android:textStyle="bold"
+                >
 
             </TextView>
 
-            <EditText
+<!--            <EditText-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:id="@+id/edt6">-->
+<!--            </EditText>-->
+            <Spinner
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/edt6">
-            </EditText>
+            </Spinner>
         </LinearLayout>
 
         <LinearLayout
@@ -218,15 +277,23 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/tex8"
+                android:textStyle="bold"
+
                 >
             </TextView>
-            <EditText
+<!--            <EditText-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:id="@+id/edt7"-->
+<!--                >-->
+<!--            </EditText>-->
+            <Spinner
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:id="@+id/edt7"
-                >
-            </EditText>
+                android:id="@+id/edt7">
+            </Spinner>
         </LinearLayout>
 
         <LinearLayout
@@ -239,6 +306,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/tex9"
+                android:textStyle="bold"
+
                 >
             </TextView>
             <EditText
@@ -246,8 +315,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/edt8"
+                android:maxLines="1"
                 >
             </EditText>
+
         </LinearLayout>
 
         <LinearLayout
@@ -260,15 +331,22 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/tex10"
+                android:textStyle="bold"
                 >
             </TextView>
-            <EditText
+<!--            <EditText-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:id="@+id/edt9"-->
+<!--                >-->
+<!--            </EditText>-->
+            <Spinner
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:id="@+id/edt9"
-                >
-            </EditText>
+                android:id="@+id/edt9">
+            </Spinner>
         </LinearLayout>
 
         <LinearLayout
@@ -281,15 +359,22 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/tex11"
+                android:textStyle="bold"
                 >
             </TextView>
-            <EditText
+<!--            <EditText-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:id="@+id/edt10"-->
+<!--                >-->
+<!--            </EditText>-->
+            <Spinner
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:id="@+id/edt10"
-                >
-            </EditText>
+                android:id="@+id/edt10">
+            </Spinner>
         </LinearLayout>
 
         <LinearLayout
@@ -302,15 +387,23 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/tex12"
+                android:textStyle="bold"
+
                 >
             </TextView>
-            <EditText
+<!--            <EditText-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:id="@+id/edt11"-->
+<!--                >-->
+<!--            </EditText>-->
+            <Spinner
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:id="@+id/edt11"
-                >
-            </EditText>
+                android:id="@+id/edt11">
+            </Spinner>
         </LinearLayout>
 
         <LinearLayout
@@ -323,16 +416,23 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/tex13"
+                android:textStyle="bold"
                 >
             </TextView>
-            <EditText
+<!--            <EditText-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@color/white"-->
+<!--                android:id="@+id/edt12"-->
+<!--                >-->
+<!--            </EditText>-->
+            <Spinner
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/white"
-                android:id="@+id/edt12"
-                >
-            </EditText>
+                android:id="@+id/edt12">
+            </Spinner>
         </LinearLayout>
 
         <LinearLayout
@@ -345,16 +445,24 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/tex14"
+                android:textStyle="bold"
+
                 >
             </TextView>
-            <EditText
+<!--            <EditText-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@color/white"-->
+<!--                android:id="@+id/edt13"-->
+<!--                >-->
+<!--            </EditText>-->
+            <Spinner
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/white"
-                android:id="@+id/edt13"
-                >
-            </EditText>
+                android:id="@+id/edt13">
+            </Spinner>
         </LinearLayout>
 
         <LinearLayout
@@ -367,16 +475,23 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/tex15"
+                android:textStyle="bold"
                 >
             </TextView>
-            <EditText
+<!--            <EditText-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@color/white"-->
+<!--                android:id="@+id/edt14"-->
+<!--                >-->
+<!--            </EditText>-->
+            <Spinner
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/white"
-                android:id="@+id/edt14"
-                >
-            </EditText>
+                android:id="@+id/edt14">
+            </Spinner>
         </LinearLayout>
 
         <LinearLayout
@@ -389,15 +504,23 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/tex16"
+                android:textStyle="bold"
+
                 >
             </TextView>
-            <EditText
+<!--            <EditText-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:id="@+id/edt15"-->
+<!--                >-->
+<!--            </EditText>-->
+            <Spinner
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:id="@+id/edt15"
-                >
-            </EditText>
+                android:id="@+id/edt15">
+            </Spinner>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -409,15 +532,22 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/tex17"
+                android:textStyle="bold"
                 >
             </TextView>
-            <EditText
+<!--            <EditText-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:id="@+id/edt16"-->
+<!--                >-->
+<!--            </EditText>-->
+            <Spinner
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:id="@+id/edt16"
-                >
-            </EditText>
+                android:id="@+id/edt16">
+            </Spinner>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -429,15 +559,23 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/tex18"
+                android:textStyle="bold"
+
                 >
             </TextView>
-            <EditText
+<!--            <EditText-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:id="@+id/edt17"-->
+<!--                >-->
+<!--            </EditText>-->
+            <Spinner
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:id="@+id/edt17"
-                >
-            </EditText>
+                android:id="@+id/edt17">
+            </Spinner>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -449,6 +587,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/tex19"
+                android:textStyle="bold"
                 >
             </TextView>
 <!--            <EditText-->
@@ -475,6 +614,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/tex20"
+                android:textStyle="bold"
                 >
             </TextView>
 <!--            <EditText-->
@@ -508,7 +648,6 @@
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:layout_margin="20dp"
-
                 />
 
             <TextView
@@ -518,6 +657,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text=""
+                android:textStyle="bold"
                 android:textAlignment="center"
                 android:textSize="20dp">
 

@@ -2,11 +2,16 @@ package com.example.myapplication;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -32,11 +37,12 @@ import java.util.Map;
 public class MainActivity2 extends AppCompatActivity {
 
 
-    EditText PartTimeEmployment,DeviceWithoutPhone,PreviousMentalTreatment,Disabled,RegularAccessInternet,LiveWithFamily,StudyGap,Income,ReadWithoutCurriculum,LongConcentration,
-            Anxiety,Depression,ObsessiveThinking,MoodSwings,PanicAttacks,CompulsiveBehavior,Tiredness,MetalHealthStatus;
+    EditText Income;
     Button predict;
     TextView result;
-    Spinner EducationStatus,Age,Gender;
+    Spinner EducationStatus,Age,Gender,PartTimeEmployment,DeviceWithoutPhone,PreviousMentalTreatment,Disabled,RegularAccessInternet,
+    LiveWithFamily,StudyGap,ReadWithoutCurriculum,LongConcentration,Anxiety,Depression,ObsessiveThinking,MoodSwings,PanicAttacks,
+            CompulsiveBehavior,Tiredness,MetalHealthStatus;
     //    String url = "https://refatapp.herokuapp.com/predict";
     String url = "http://10.13.222.161:8000/treatment";
 
@@ -47,42 +53,123 @@ public class MainActivity2 extends AppCompatActivity {
         //Intent intent = getIntent();
         setContentView(R.layout.activity_main2);
 
+        //Toolbar
+
+        Toolbar toolbar= findViewById(R.id.layouttool);
+        setSupportActionBar(toolbar);
+
+        //Change the status bar background color
+        Window w = MainActivity2.this.getWindow();
+        w.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        w.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        w.setStatusBarColor(ContextCompat.getColor(MainActivity2.this, R.color.white));
+
+
+        //To change the status bar Text and icon color
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+
+
         EducationStatus = findViewById(R.id.edt1);
         ArrayAdapter<String> myadapter=new ArrayAdapter<String>(MainActivity2.this,
                 android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.EducationStatus));
         EducationStatus.setAdapter(myadapter);
+
         Age = findViewById(R.id.edt18);
-        ArrayAdapter<String>myadapter1=new ArrayAdapter<String>(MainActivity2.this,
+        myadapter=new ArrayAdapter<String>(MainActivity2.this,
                 android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.Age));
-        Age.setAdapter(myadapter1);
+        Age.setAdapter(myadapter);
 
         Gender = findViewById(R.id.edt19);
-        ArrayAdapter<String>myadapter2=new ArrayAdapter<String>(MainActivity2.this,
+        myadapter=new ArrayAdapter<String>(MainActivity2.this,
                 android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.Gender));
-        Gender.setAdapter(myadapter2);
+        Gender.setAdapter(myadapter);
 
         PartTimeEmployment = findViewById(R.id.edt);
+        myadapter=new ArrayAdapter<String>(MainActivity2.this,
+                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.common));
+        PartTimeEmployment.setAdapter(myadapter);
+
         MetalHealthStatus=findViewById(R.id.edt20);
+        myadapter=new ArrayAdapter<String>(MainActivity2.this,
+                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.common));
+        MetalHealthStatus.setAdapter(myadapter);
 
         DeviceWithoutPhone = findViewById(R.id.edt2);
+        myadapter=new ArrayAdapter<String>(MainActivity2.this,
+                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.common));
+        DeviceWithoutPhone.setAdapter(myadapter);
+
         PreviousMentalTreatment = findViewById(R.id.edt3);
+        myadapter=new ArrayAdapter<String>(MainActivity2.this,
+                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.common));
+        PreviousMentalTreatment.setAdapter(myadapter);
+
         Disabled = findViewById(R.id.edt4);
+        myadapter=new ArrayAdapter<String>(MainActivity2.this,
+                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.common));
+        Disabled.setAdapter(myadapter);
+
         RegularAccessInternet = findViewById(R.id.edt5);
+        myadapter=new ArrayAdapter<String>(MainActivity2.this,
+                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.common));
+        RegularAccessInternet.setAdapter(myadapter);
+
         LiveWithFamily = findViewById(R.id.edt6);
+        myadapter=new ArrayAdapter<String>(MainActivity2.this,
+                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.common));
+        LiveWithFamily.setAdapter(myadapter);
+
         StudyGap = findViewById(R.id.edt7);
-        Income = findViewById(R.id.edt8);
+        myadapter=new ArrayAdapter<String>(MainActivity2.this,
+                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.common));
+        StudyGap.setAdapter(myadapter);
+
         ReadWithoutCurriculum = findViewById(R.id.edt9);
+        myadapter=new ArrayAdapter<String>(MainActivity2.this,
+                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.common));
+        ReadWithoutCurriculum.setAdapter(myadapter);
+
         LongConcentration = findViewById(R.id.edt10);
+        myadapter=new ArrayAdapter<String>(MainActivity2.this,
+                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.common));
+        LongConcentration.setAdapter(myadapter);
+
         Anxiety = findViewById(R.id.edt11);
+        myadapter=new ArrayAdapter<String>(MainActivity2.this,
+                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.common));
+        Anxiety.setAdapter(myadapter);
+
         Depression = findViewById(R.id.edt12);
+        myadapter=new ArrayAdapter<String>(MainActivity2.this,
+                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.common));
+        Depression.setAdapter(myadapter);
+
         ObsessiveThinking = findViewById(R.id.edt13);
+        myadapter=new ArrayAdapter<String>(MainActivity2.this,
+                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.common));
+        ObsessiveThinking.setAdapter(myadapter);
+
         MoodSwings = findViewById(R.id.edt14);
+        myadapter=new ArrayAdapter<String>(MainActivity2.this,
+                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.common));
+        MoodSwings.setAdapter(myadapter);
+
         PanicAttacks = findViewById(R.id.edt15);
+        myadapter=new ArrayAdapter<String>(MainActivity2.this,
+                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.common));
+        PanicAttacks.setAdapter(myadapter);
+
         CompulsiveBehavior = findViewById(R.id.edt16);
+        myadapter=new ArrayAdapter<String>(MainActivity2.this,
+                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.common));
+        CompulsiveBehavior.setAdapter(myadapter);
+
         Tiredness = findViewById(R.id.edt17);
+        myadapter=new ArrayAdapter<String>(MainActivity2.this,
+                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.common));
+        Tiredness.setAdapter(myadapter);
 
-
-
+        Income = findViewById(R.id.edt8);
         predict = findViewById(R.id.button1);
         result = findViewById(R.id.result);
 
@@ -106,10 +193,12 @@ public class MainActivity2 extends AppCompatActivity {
                             JSONObject jsonObject = new JSONObject(response);
                             String data = jsonObject.getString("treatment");
                             if(data.equals("1")){
+                                result.setTextColor(Color.RED);
                                 result.setText("YES");
 //                                        Toast.makeText(MainActivity2.this, "refatrtwrtytryertyetyety", Toast.LENGTH_LONG).show();
 //                                        Log.d("myTag", "correct response");
                             }else{
+                                result.setTextColor(Color.GREEN);
                                 result.setText("NO");
 //                                        Toast.makeText(MainActivity2.this, "refrtyertyetrytryrtyrtey", Toast.LENGTH_LONG).show();
 //                                        Log.d("myTag", "wrong response");
@@ -133,25 +222,25 @@ public class MainActivity2 extends AppCompatActivity {
             protected Map<String,String> getParams(){
                 Map<String,String> params = new HashMap<String,String>();
 
-                params.put("PartTimeEmployment",PartTimeEmployment.getText().toString());
-                params.put("MetalHealthStatus",MetalHealthStatus.getText().toString());
+                params.put("PartTimeEmployment",PartTimeEmployment.getSelectedItem().toString());
+                params.put("MetalHealthStatus",MetalHealthStatus.getSelectedItem().toString());
                 params.put("EducationStatus",EducationStatus.getSelectedItem().toString());
-                params.put("DeviceWithoutPhone",DeviceWithoutPhone.getText().toString());
-                params.put("PreviousMentalTreatment",PreviousMentalTreatment.getText().toString());
-                params.put("Disabled",Disabled.getText().toString());
-                params.put("RegularAccessInternet",RegularAccessInternet.getText().toString());
-                params.put("LiveWithFamily",LiveWithFamily.getText().toString());
-                params.put("StudyGap",StudyGap.getText().toString());
+                params.put("DeviceWithoutPhone",DeviceWithoutPhone.getSelectedItem().toString());
+                params.put("PreviousMentalTreatment",PreviousMentalTreatment.getSelectedItem().toString());
+                params.put("Disabled",Disabled.getSelectedItem().toString());
+                params.put("RegularAccessInternet",RegularAccessInternet.getSelectedItem().toString());
+                params.put("LiveWithFamily",LiveWithFamily.getSelectedItem().toString());
+                params.put("StudyGap",StudyGap.getSelectedItem().toString());
                 params.put("Income",Income.getText().toString());
-                params.put("ReadWithoutCurriculum",ReadWithoutCurriculum.getText().toString());
-                params.put("LongConcentration",LongConcentration.getText().toString());
-                params.put("Anxiety",Anxiety.getText().toString());
-                params.put("Depression",Depression.getText().toString());
-                params.put("ObsessiveThinking",ObsessiveThinking.getText().toString());
-                params.put("MoodSwings",MoodSwings.getText().toString());
-                params.put("PanicAttacks",PanicAttacks.getText().toString());
-                params.put("CompulsiveBehavior",CompulsiveBehavior.getText().toString());
-                params.put("Tiredness",Tiredness.getText().toString());
+                params.put("ReadWithoutCurriculum",ReadWithoutCurriculum.getSelectedItem().toString());
+                params.put("LongConcentration",LongConcentration.getSelectedItem().toString());
+                params.put("Anxiety",Anxiety.getSelectedItem().toString());
+                params.put("Depression",Depression.getSelectedItem().toString());
+                params.put("ObsessiveThinking",ObsessiveThinking.getSelectedItem().toString());
+                params.put("MoodSwings",MoodSwings.getSelectedItem().toString());
+                params.put("PanicAttacks",PanicAttacks.getSelectedItem().toString());
+                params.put("CompulsiveBehavior",CompulsiveBehavior.getSelectedItem().toString());
+                params.put("Tiredness",Tiredness.getSelectedItem().toString());
                 params.put("Age",Age.getSelectedItem().toString());
                 params.put("Gender",Gender.getSelectedItem().toString());
 

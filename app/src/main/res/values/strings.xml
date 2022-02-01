@@ -74,7 +74,14 @@
       <item>Eating outside</item>
       <item>Colleagues</item>
     </string-array>
-
+    <string-array name="Time_utilized">
+       <item>Yes</item>
+       <item>No</item>
+    </string-array>
+    <string-array name="find_yourself">
+       <item>Yes</item>
+       <item>No</item>
+    </string-array>
 
 <!--    Treatment Required-->
 
@@ -85,7 +92,7 @@
     <string name="tex2">EducationStatus</string>
     <string name="tex3">DeviceWithoutPhone</string>
     <string name="tex4">PreviousMentalTreatment</string>
-    <string name="tex5">Disabled</string>
+    <string name="tex5">PhysicalDisability</string>
     <string name="tex6">RegularAccessInternet</string>
     <string name="tex7">LiveWithFamily</string>
     <string name="tex8">StudyGap</string>
@@ -127,5 +134,8 @@
         <item>Male</item>
         <item>Female</item>
     </string-array>
-
+    <string-array name="common">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
 </resources>
