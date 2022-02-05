@@ -1,22 +1,22 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="name">Mental Health Status</string>
+    <string name="app_name">Artificial Psychiatrist</string>
+    <string name="name">Mental Sickness Prediction</string>
     <string name="text">Age</string>
-    <string name="text1">TimeSpentOnlineClass</string>
-    <string name="text2">RatingOnlineClass</string>
-    <string name="text3">MediumOnlineClass</string>
-    <string name="text4">TimeSpentStudy</string>
-    <string name="text5">TimeSpentFitness</string>
-    <string name="text6">TimeSpentSleep</string>
-    <string name="text7">TimeSpentSocialMedia</string>
-    <string name="text8">PreferedSocialMedia</string>
-    <string name="text9">TimeSpentTV</string>
-    <string name="text10">NumberMealsPerDay</string>
-    <string name="text11">ChangeYourWeight</string>
-    <string name="text12">StressBusters</string>
-    <string name="text13">TimeUtilized</string>
-    <string name="text14">MoreConnectedYourFamilyFriendsRelatives</string>
-    <string name="text15">WhatYouMissMost</string>
+    <string name="text1">Time Spent On Online Class(hr)</string>
+    <string name="text2">Rating Of Online Class</string>
+    <string name="text3">Medium Of Online Class</string>
+    <string name="text4">Time Spent In Study(hr)</string>
+    <string name="text5">Time Spent On Fitness(hr)</string>
+    <string name="text6">Time Spent On Sleep(hr)</string>
+    <string name="text7">Time Spent On Social Media(hr)</string>
+    <string name="text8">Prefered Social Media</string>
+    <string name="text9">Time Spent On TV(hr)</string>
+    <string name="text10">Number Of Meals Per Day</string>
+    <string name="text11">Change In Weight</string>
+    <string name="text12">Stress Busters</string>
+    <string name="text13">Time Utilized</string>
+    <string name="text14">Connected With Family,Friends,Relatives</string>
+    <string name="text15">What You Miss The Most</string>
     <string name="button_name">submit</string>
 
 <!--     spinner for mental health-->
@@ -85,30 +85,30 @@
 
 <!--    Treatment Required-->
 
-    <string name="name1">Treatment Requirement Status</string>
+    <string name="name1">Recovery Suggestion Prediction</string>
 
-    <string name="tex1">PartTimeEmployment</string>
+    <string name="tex1">Part Time Employment</string>
     <!--    <string name="tex1">MetalHealthStatus</string>-->
-    <string name="tex2">EducationStatus</string>
-    <string name="tex3">DeviceWithoutPhone</string>
-    <string name="tex4">PreviousMentalTreatment</string>
-    <string name="tex5">PhysicalDisability</string>
-    <string name="tex6">RegularAccessInternet</string>
-    <string name="tex7">LiveWithFamily</string>
-    <string name="tex8">StudyGap</string>
+    <string name="tex2">Education</string>
+    <string name="tex3">Device Apart From Phone</string>
+    <string name="tex4">Treatment For Any Disease</string>
+    <string name="tex5">Physical Disability</string>
+    <string name="tex6">Regular Access To Internet</string>
+    <string name="tex7">Live With Family</string>
+    <string name="tex8">Gap In Study</string>
     <string name="tex9">Income(USD)</string>
-    <string name="tex10">ReadWithoutCurriculum</string>
-    <string name="tex11">LongConcentration</string>
+    <string name="tex10">Read Besides Curriculum</string>
+    <string name="tex11">Long Term Concentration</string>
     <string name="tex12">Anxiety</string>
     <string name="tex13">Depression</string>
-    <string name="tex14">ObsessiveThinking</string>
-    <string name="tex15">MoodSwings</string>
-    <string name="tex16">PanicAttacks</string>
-    <string name="tex17">CompulsiveBehavior</string>
+    <string name="tex14">Obsessive Thinking</string>
+    <string name="tex15">Mood Swings</string>
+    <string name="tex16">Panic Attacks</string>
+    <string name="tex17">Compulsive Behavior</string>
     <string name="tex18">Tiredness</string>
     <string name="tex19">Age</string>
     <string name="tex20">Gender</string>
-    <string name="tex21">MetalHealthStatus</string>
+<!--    <string name="tex21">MetalHealthStatus</string>-->
     <string name="button1">submit</string>
 
 

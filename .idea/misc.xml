@@ -3,14 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Academic/mental_health_project/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.1503623188405797" />
+        <entry key="..\:/Academic/mental_health_project/MyApplication/app/src/main/res/layout/heading.xml" value="0.20833333333333334" />
+        <entry key="..\:/Academic/mental_health_project/MyApplication/app/src/main/res/layout/spinner_text_size.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/Gaming Lab/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/Gaming Lab/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main2.xml" value="0.25" />
         <entry key="..\:/Users/Gaming Lab/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main3.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Gaming Lab/AndroidStudioProjects/MyApplication/app/src/main/res/layout/treatment.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Gaming Lab/Desktop/faruk_sir_cse/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.30117753623188404" />
+        <entry key="..\:/Users/Gaming Lab/Desktop/faruk_sir_cse/MyApplication/app/src/main/res/drawable/dotted.xml" value="0.26" />
+        <entry key="..\:/Users/Gaming Lab/Desktop/faruk_sir_cse/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/Gaming Lab/Desktop/faruk_sir_cse/MyApplication/app/src/main/res/layout/activity_main2.xml" value="0.33" />
         <entry key="..\:/Users/Gaming Lab/Desktop/faruk_sir_cse/MyApplication/app/src/main/res/layout/heading.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Gaming Lab/Desktop/faruk_sir_cse/MyApplication/app/src/main/res/layout/spinner_text_size.xml" value="0.18333333333333332" />
         <entry key="..\:/Users/Gaming Lab/Desktop/faruk_sir_cse/MyApplication/app/src/main/res/layout/toolbar.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Gaming Lab/Desktop/faruk_sir_cse/MyApplication/app/src/main/res/layout/treatment.xml" value="0.2635416666666667" />
       </map>
     </option>
   </component>

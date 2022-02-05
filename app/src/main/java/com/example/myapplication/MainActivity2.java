@@ -42,9 +42,9 @@ public class MainActivity2 extends AppCompatActivity {
     TextView result;
     Spinner EducationStatus,Age,Gender,PartTimeEmployment,DeviceWithoutPhone,PreviousMentalTreatment,Disabled,RegularAccessInternet,
     LiveWithFamily,StudyGap,ReadWithoutCurriculum,LongConcentration,Anxiety,Depression,ObsessiveThinking,MoodSwings,PanicAttacks,
-            CompulsiveBehavior,Tiredness,MetalHealthStatus;
-    //    String url = "https://refatapp.herokuapp.com/predict";
-    String url = "http://10.13.222.161:8000/treatment";
+            CompulsiveBehavior,Tiredness;
+    String url = "https://artificial-psychiatrist.herokuapp.com/treatment";
+    //String url = "http://10.13.222.161:8000/treatment";
 
     String s;
     @Override
@@ -55,13 +55,13 @@ public class MainActivity2 extends AppCompatActivity {
 
         //Toolbar
 
-        Toolbar toolbar= findViewById(R.id.layouttool);
+
+        Toolbar toolbar= findViewById(R.id.tb);
         setSupportActionBar(toolbar);
+
 
         //Change the status bar background color
         Window w = MainActivity2.this.getWindow();
-        w.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        w.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         w.setStatusBarColor(ContextCompat.getColor(MainActivity2.this, R.color.white));
 
 
@@ -89,10 +89,10 @@ public class MainActivity2 extends AppCompatActivity {
                 android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.common));
         PartTimeEmployment.setAdapter(myadapter);
 
-        MetalHealthStatus=findViewById(R.id.edt20);
-        myadapter=new ArrayAdapter<String>(MainActivity2.this,
-                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.common));
-        MetalHealthStatus.setAdapter(myadapter);
+//        MetalHealthStatus=findViewById(R.id.edt20);
+//        myadapter=new ArrayAdapter<String>(MainActivity2.this,
+//                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.common));
+//        MetalHealthStatus.setAdapter(myadapter);
 
         DeviceWithoutPhone = findViewById(R.id.edt2);
         myadapter=new ArrayAdapter<String>(MainActivity2.this,
@@ -223,7 +223,7 @@ public class MainActivity2 extends AppCompatActivity {
                 Map<String,String> params = new HashMap<String,String>();
 
                 params.put("PartTimeEmployment",PartTimeEmployment.getSelectedItem().toString());
-                params.put("MetalHealthStatus",MetalHealthStatus.getSelectedItem().toString());
+//                params.put("MetalHealthStatus",MetalHealthStatus.getSelectedItem().toString());
                 params.put("EducationStatus",EducationStatus.getSelectedItem().toString());
                 params.put("DeviceWithoutPhone",DeviceWithoutPhone.getSelectedItem().toString());
                 params.put("PreviousMentalTreatment",PreviousMentalTreatment.getSelectedItem().toString());

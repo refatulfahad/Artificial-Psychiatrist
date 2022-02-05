@@ -6,6 +6,7 @@ import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -39,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
     Button predict;
     TextView result;
     Spinner Rating_class,Medium_class,platform_media,weight,Stress,miss,Time_utilized,find_yourself;
-    //String url = "https://refatthesis.herokuapp.com/predict";
-    String url = "http://10.13.222.161:8000/predict";
+    String url = "https://artificial-psychiatrist.herokuapp.com/predict";
+    //String url = "http://10.13.222.161:8000/predict";
     //String url = " http://127.0.0.1:5000/predict";
 
     String s;
@@ -51,17 +52,17 @@ public class MainActivity extends AppCompatActivity {
 
         //Toolbar
 
-        Toolbar toolbar= findViewById(R.id.layouttool);
-        setSupportActionBar(toolbar);
+        Toolbar toolbar= findViewById(R.id.tb);
+       //setSupportActionBar(toolbar);
 
-        //Change the status bar background color
-        Window w = MainActivity.this.getWindow();
-        w.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        w.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        w.setStatusBarColor(ContextCompat.getColor(MainActivity.this, R.color.white));
+       //Change the status bar background color
+       Window w = MainActivity.this.getWindow();
+//       w.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+//      w.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+       w.setStatusBarColor(ContextCompat.getColor(MainActivity.this, R.color.white));
 
 
-        //To change the status bar Text and icon color
+      //To change the status bar Text and icon color
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
 
 
@@ -147,6 +148,8 @@ public class MainActivity extends AppCompatActivity {
 
                                     }else{
                                         result.setTextColor(Color.GREEN);
+                                        Typeface boldTypeface=Typeface.defaultFromStyle(Typeface.BOLD);
+                                        result.setTypeface(boldTypeface);
                                         result.setText("NO");
 //                                        Toast.makeText(MainActivity.this, "refrtyertyetrytryrtyrtey", Toast.LENGTH_LONG).show();
 //                                        Log.d("myTag", "wrong response");
