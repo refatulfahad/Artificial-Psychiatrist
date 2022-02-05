@@ -17,7 +17,7 @@
     <string name="text13">Time Utilized</string>
     <string name="text14">Connected With Family,Friends,Relatives</string>
     <string name="text15">What You Miss The Most</string>
-    <string name="button_name">submit</string>
+    <string name="button_name">Submit</string>
 
 <!--     spinner for mental health-->
     <string-array name="Rating_class">
@@ -109,7 +109,7 @@
     <string name="tex19">Age</string>
     <string name="tex20">Gender</string>
 <!--    <string name="tex21">MetalHealthStatus</string>-->
-    <string name="button1">submit</string>
+    <string name="button1">Submit</string>
 
 
 <!--    spinner for treatment-->

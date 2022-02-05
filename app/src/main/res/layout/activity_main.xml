@@ -28,7 +28,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textSize="22sp"
-                android:textColor="#ff1493"
+                android:textColor="#1E5128"
                 android:text="Artificial Psychiatrist"/>
         </androidx.appcompat.widget.Toolbar>
 
@@ -44,7 +44,7 @@
                 android:layout_height="100dp"
                 android:layout_gravity="center"
                 app:cardElevation="6dp"
-                android:backgroundTint="#ff1493"
+                android:backgroundTint="#1E5128"
                 card_view:cardCornerRadius="4dp"
                 >
 
@@ -548,24 +548,24 @@
                 android:layout_height="wrap_content"
                 android:text="@string/button_name"
                 android:textSize="20dp"
-                android:backgroundTint="#ff1493"
+                android:backgroundTint="#1E5128"
                 android:textStyle="bold"
                 android:layout_margin="20dp"
-
+                android:textAllCaps="false"
                 />
 
-            <TextView
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:id="@+id/result"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:textSize="20dp">
+<!--            <TextView-->
+<!--                android:gravity="center"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:id="@+id/result"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text=""-->
+<!--                android:textStyle="bold"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textSize="20dp">-->
 
-            </TextView>
+<!--            </TextView>-->
         </LinearLayout>
 
 

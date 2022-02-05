@@ -193,13 +193,15 @@ public class MainActivity2 extends AppCompatActivity {
                             JSONObject jsonObject = new JSONObject(response);
                             String data = jsonObject.getString("treatment");
                             if(data.equals("1")){
-                                result.setTextColor(Color.RED);
-                                result.setText("YES");
+//                                result.setTextColor(Color.RED);
+//                                result.setText("YES");
+                                openDialog("Artificial Psychiatrist prescribes that you need treatment to recover  from mental sickness.",false);
 //                                        Toast.makeText(MainActivity2.this, "refatrtwrtytryertyetyety", Toast.LENGTH_LONG).show();
 //                                        Log.d("myTag", "correct response");
                             }else{
-                                result.setTextColor(Color.GREEN);
-                                result.setText("NO");
+//                                result.setTextColor(Color.GREEN);
+//                                result.setText("NO");
+                                openDialog("Artificial Psychiatrist prescribes that you need counselling to recover from mental sickness.",false);
 //                                        Toast.makeText(MainActivity2.this, "refrtyertyetrytryrtyrtey", Toast.LENGTH_LONG).show();
 //                                        Log.d("myTag", "wrong response");
                             }
@@ -250,6 +252,10 @@ public class MainActivity2 extends AppCompatActivity {
         };
         RequestQueue queue = Volley.newRequestQueue(MainActivity2.this);
         queue.add(stringRequest);
+    }
+    public void openDialog(String string,boolean ck){
+        dialog Dialog=new dialog(string,ck);
+        Dialog.show(getSupportFragmentManager(),"dialog");
     }
 }
 

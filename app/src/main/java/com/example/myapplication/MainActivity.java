@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         predict = findViewById(R.id.button);
-        result = findViewById(R.id.result);
+        //result = findViewById(R.id.result);
 
         predict.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -140,17 +140,16 @@ public class MainActivity extends AppCompatActivity {
                                     JSONObject jsonObject = new JSONObject(response);
                                     String data = jsonObject.getString("Health_status");
                                     if(data.equals("1")){
-                                        //result.setText("yes");
-//                                        Toast.makeText(MainActivity.this, "refatrtwrtytryertyetyety", Toast.LENGTH_LONG).show();
-//                                        Log.d("myTag", "correct response");
-                                        Intent intent=new Intent(getApplicationContext(),MainActivity2.class);
-                                        startActivity(intent);
+//                                        Intent intent=new Intent(getApplicationContext(),MainActivity2.class);
+//                                        startActivity(intent);
+                                          openDialog("Artificial Psychiatrist says that you have mental sickness.",true);
 
                                     }else{
-                                        result.setTextColor(Color.GREEN);
-                                        Typeface boldTypeface=Typeface.defaultFromStyle(Typeface.BOLD);
-                                        result.setTypeface(boldTypeface);
-                                        result.setText("NO");
+//                                        result.setTextColor(Color.GREEN);
+//                                        Typeface boldTypeface=Typeface.defaultFromStyle(Typeface.BOLD);
+//                                        result.setTypeface(boldTypeface);
+//                                        result.setText("NO");
+                                          openDialog("Artificial Psychiatrist says that you have no mental sickness.",false);
 //                                        Toast.makeText(MainActivity.this, "refrtyertyetrytryrtyrtey", Toast.LENGTH_LONG).show();
 //                                        Log.d("myTag", "wrong response");
                                     }
@@ -194,5 +193,9 @@ public class MainActivity extends AppCompatActivity {
         };
         RequestQueue queue = Volley.newRequestQueue(MainActivity.this);
         queue.add(stringRequest);
+    }
+    public void openDialog(String string,boolean ck){
+        dialog Dialog=new dialog(string,ck);
+        Dialog.show(getSupportFragmentManager(),"dialog");
     }
 }

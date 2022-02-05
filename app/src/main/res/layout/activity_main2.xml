@@ -29,7 +29,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textSize="22sp"
-                android:textColor="#ff1493"
+                android:textColor="#1E5128"
                 android:text="Artificial Psychiatrist"/>
         </androidx.appcompat.widget.Toolbar>
 
@@ -44,7 +44,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
-                android:backgroundTint="#ff1493"
+                android:backgroundTint="#1E5128"
                 card_view:cardCornerRadius="4dp"
                 >
             <TextView
@@ -703,8 +703,9 @@
                 android:text="@string/button_name"
                 android:textSize="20dp"
                 android:textStyle="bold"
-               android:backgroundTint="#ff1493"
+                android:backgroundTint="#1E5128"
                 android:layout_margin="20dp"
+                android:textAllCaps="false"
                 />
 
             <TextView
