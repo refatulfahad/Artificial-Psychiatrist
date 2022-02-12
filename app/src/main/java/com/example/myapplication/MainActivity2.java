@@ -195,13 +195,13 @@ public class MainActivity2 extends AppCompatActivity {
                             if(data.equals("1")){
 //                                result.setTextColor(Color.RED);
 //                                result.setText("YES");
-                                openDialog("Artificial Psychiatrist prescribes that you need treatment to recover  from mental sickness.",false);
+                                openDialog("Artificial Psychiatrist prescribes that you need treatment to recover  from mental illness.",false);
 //                                        Toast.makeText(MainActivity2.this, "refatrtwrtytryertyetyety", Toast.LENGTH_LONG).show();
 //                                        Log.d("myTag", "correct response");
                             }else{
 //                                result.setTextColor(Color.GREEN);
 //                                result.setText("NO");
-                                openDialog("Artificial Psychiatrist prescribes that you need counselling to recover from mental sickness.",false);
+                                openDialog("Artificial Psychiatrist prescribes that you need counselling to recover from mental illness.",false);
 //                                        Toast.makeText(MainActivity2.this, "refrtyertyetrytryrtyrtey", Toast.LENGTH_LONG).show();
 //                                        Log.d("myTag", "wrong response");
                             }

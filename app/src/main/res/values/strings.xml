@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Artificial Psychiatrist</string>
-    <string name="name">Mental Sickness Prediction</string>
+    <string name="name">Mental Illness Prediction</string>
     <string name="text">Age</string>
     <string name="text1">Time Spent On Online Class(hr)</string>
     <string name="text2">Rating Of Online Class</string>

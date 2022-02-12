@@ -142,14 +142,14 @@ public class MainActivity extends AppCompatActivity {
                                     if(data.equals("1")){
 //                                        Intent intent=new Intent(getApplicationContext(),MainActivity2.class);
 //                                        startActivity(intent);
-                                          openDialog("Artificial Psychiatrist says that you have mental sickness.",true);
+                                          openDialog("Artificial Psychiatrist says that you have mental illness.",true);
 
                                     }else{
 //                                        result.setTextColor(Color.GREEN);
 //                                        Typeface boldTypeface=Typeface.defaultFromStyle(Typeface.BOLD);
 //                                        result.setTypeface(boldTypeface);
 //                                        result.setText("NO");
-                                          openDialog("Artificial Psychiatrist says that you have no mental sickness.",false);
+                                          openDialog("Artificial Psychiatrist says that you have no mental illness.",false);
 //                                        Toast.makeText(MainActivity.this, "refrtyertyetrytryrtyrtey", Toast.LENGTH_LONG).show();
 //                                        Log.d("myTag", "wrong response");
                                     }
