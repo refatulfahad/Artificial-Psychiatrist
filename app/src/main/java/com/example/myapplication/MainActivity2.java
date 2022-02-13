@@ -39,7 +39,7 @@ public class MainActivity2 extends AppCompatActivity {
 
     EditText Income;
     Button predict;
-    TextView result;
+    //TextView result;
     Spinner EducationStatus,Age,Gender,PartTimeEmployment,DeviceWithoutPhone,PreviousMentalTreatment,Disabled,RegularAccessInternet,
     LiveWithFamily,StudyGap,ReadWithoutCurriculum,LongConcentration,Anxiety,Depression,ObsessiveThinking,MoodSwings,PanicAttacks,
             CompulsiveBehavior,Tiredness;
@@ -171,7 +171,7 @@ public class MainActivity2 extends AppCompatActivity {
 
         Income = findViewById(R.id.edt8);
         predict = findViewById(R.id.button1);
-        result = findViewById(R.id.result);
+        //result = findViewById(R.id.result);
 
         predict.setOnClickListener(new View.OnClickListener() {
             @Override
